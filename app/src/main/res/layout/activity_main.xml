@@ -49,6 +49,8 @@
             android:scaleType="centerInside"
             android:gravity="center"
             android:background="@android:color/transparent"/>
+
+
     </LinearLayout>
 
     <View
@@ -56,213 +58,170 @@
         android:layout_height="1dp"
         android:background="#bbbbbb" />
 
-    <LinearLayout
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/write_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#f6f6f6">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="25dp"
+                android:text="도슨트로 참여하시거나 원하시는 도슨트를 찾아보세요." />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/write_find_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/btn_main_find_off"
+                    android:scaleType="centerInside"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"/>
+
+                <ImageButton
+                    android:id="@+id/write_help_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/btn_main_help_off"
+                    android:scaleType="centerInside"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/write_find_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="작성자명" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/find_name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="글 비밀번호" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/find_pw"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="내용" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/find_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:ems="500"
+                    android:inputType="textPersonName"
+                    />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/ic_launcher" />
+                <Button
+                    android:id="@+id/find_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="찾아요 글 등록" />
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        app:srcCompat="@android:color/holo_green_light" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/write_help_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        </ScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="작성자명" />
 
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/help_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="글 비밀번호" />
+
+                <EditText
+                    android:id="@+id/help_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="내용" />
+
+                <EditText
+                    android:id="@+id/help_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="500"
+                    android:inputType="textPersonName"
+                    />
+
+                <Button
+                    android:id="@+id/help_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="해드려요 글 등록" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
 
     <View
         android:layout_width="match_parent"
@@ -278,109 +237,50 @@
         android:paddingTop="15.7dp"
         android:paddingBottom="12.7dp">
 
-        <ImageButton
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/btn_bottom_find_off"
-            />
 
-        <ImageButton
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/btn_bottom_help_off" />
 
-        <ImageButton
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/btn_bottom_display_off" />
+            <ImageButton
+                android:id="@+id/btn_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btn_bottom_find_off"
+                />
 
-        <ImageButton
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/btn_bottom_grouproom_off" />
+            <ImageButton
+                android:id="@+id/btn_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btn_bottom_help_off" />
+
+            <ImageButton
+                android:id="@+id/btn_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btn_bottom_display_off" />
+
+            <ImageButton
+                android:id="@+id/btn_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/btn_bottom_grouproom_off" />
+
+
     </LinearLayout>
-
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="118.7dp"-->
-        <!--android:background="@drawable/write_boder"-->
-        <!--android:orientation="vertical"-->
-        <!--android:paddingTop="14dp"-->
-        <!--android:paddingBottom="10dp"-->
-        <!--android:paddingLeft="13.7dp"-->
-        <!--android:paddingRight="13.7dp">-->
-        <!---->
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="43dp"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:layout_marginBottom="13.3dp">-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/imageView2"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--app:srcCompat="@mipmap/ic_launcher"-->
-                <!--tools:layout_editor_absoluteX="38dp"-->
-                <!--tools:layout_editor_absoluteY="84dp" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/textView3"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="TextView"-->
-                <!--tools:layout_editor_absoluteY="102dp"-->
-                <!--app:layout_constraintLeft_toRightOf="@+id/imageView2"-->
-                <!--android:layout_marginLeft="0dp" />-->
-            <!---->
-        <!--</LinearLayout>-->
-        <!---->
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:orientation="horizontal">-->
-
-            <!--<ImageButton-->
-                <!--android:id="@+id/imageButton3"-->
-                <!--android:layout_width="147dp"-->
-                <!--android:layout_height="36dp"-->
-                <!--app:srcCompat="@android:drawable/bottom_bar"-->
-                <!--tools:layout_editor_absoluteY="132dp"-->
-                <!--tools:layout_editor_absoluteX="38dp" />-->
-
-            <!--<ImageButton-->
-                <!--android:id="@+id/imageButton4"-->
-                <!--android:layout_width="147dp"-->
-                <!--android:layout_height="36dp"-->
-                <!--app:srcCompat="@android:drawable/bottom_bar"-->
-                <!--tools:layout_editor_absoluteY="132dp"-->
-                <!--app:layout_constraintLeft_toRightOf="@+id/imageButton3"-->
-                <!--android:layout_marginLeft="0dp" />-->
-
-        <!--</LinearLayout>-->
-
-    <!--</LinearLayout>-->
-
 
 </LinearLayout>
